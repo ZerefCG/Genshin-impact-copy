@@ -1,0 +1,139 @@
+main{
+    min-height: 81vh;
+    display: flex;
+    /* border: solid 1px WHITE; COMMENT WHEN FINISH HIM */
+    align-items: flex-end;
+}
+
+/* MAIN CONTAINER STYLE*/
+
+main .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+/* BORDERS FOR CALCULE AND BOX MODEL, COMMENT WHEN FINISH HIM */
+.play-container,
+.downloads-section, h2{
+    /* border: solid 1px white; */
+}
+
+/* CONTAINER PLAY BUTTON  STYLES */
+
+main .container .play-container{
+    width: 30%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    margin: 0 auto;
+    background-image: url(../img/button-container-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 38rem;
+}
+
+/* BUTTON RADIUS ON CIRCLE */
+main .container .play-container .border-radius{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    border: none;
+    background-image: url(../img/button-black.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* HOVER EFFECT WITH ANOTHER IMAGEN BUTTON */
+
+main .container .play-container .border-radius:hover{
+    transition: 0.2s all;
+    background-color: transparent;
+    background-position: 45% 60%;    
+    background-image: url(../img/button-white.png);
+}
+
+/* END BUTTON PLAY SECTION */
+
+
+/* H2 EFFECTS */
+
+main .container h2{
+    font-size: 3.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: var(--text-donwnload-now);
+}
+
+/* -----CONTAINER BUTTONS PS4, APPLE, GOOGLE PLAY, WINDOWS------ */
+
+main .container .downloads-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    align-items: baseline;
+}
+
+/* NOW STYLE THE IMAGES WITH LINK */
+main .container .downloads-section li{
+    margin-right: 1.5rem;
+    opacity: 0.8;
+}
+
+main .container .downloads-section li a{
+   display: flex;
+}
+
+main .container .downloads-section li a img{
+    vertical-align: top;
+    width: 100%;
+}
+
+/* HOVER EFFECTS OF THIS SECTION */
+main .container .downloads-section li:hover{
+    opacity: 1;
+    transition: 0.2s all;
+}
+
+/* -----CONTAINER BUTTONS PS4, APPLE, GOOGLE PLAY, WINDOWS------ */
+
+/* INGAME TERMS A BIT PADDING */
+.ingame-terms{
+    padding-left: 1rem;
+}
+
+@media screen and (max-width:1082px)
+{
+    main{
+        align-items: center;
+        min-height:66vh;
+    }
+
+    main .container .play-container{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:812px)
+{
+    main .container .downloads-section li{
+        margin-top: 1rem;
+    }
+
+    .ingame-terms{
+        text-align: center;
+        margin:1rem 0 1rem 0;
+        padding: 0;
+    }
+}

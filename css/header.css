@@ -1,0 +1,267 @@
+.header{
+   
+    background-color:var(--header-bg);   
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    box-shadow: var(--box-shadow-header);
+  
+}
+
+
+/* IMAGE HEADER  CONTAINER*/
+
+.header .header-logo-container{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 7.8rem;
+    z-index: 2;
+}
+
+/* IMAGE GENSHIN */
+
+.header .header-logo-container .header-logo img{
+    vertical-align:top;
+    z-index: 2;
+}
+
+/* AUDIO */
+
+.header .header-logo-container .audio-logo-header{
+    width: 3rem;
+    margin-right: -8rem;
+    z-index: 3;
+}
+.header .header-logo-container .audio-logo-header a{
+    width: inherit;
+}
+
+.header .header-logo-container .audio-logo-header a img{
+    width: inherit;
+}
+
+/* MENU AND LOGIN STYLES */
+
+.header .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+/* NAV STYLES */
+
+.header .container .menu{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 2.9rem;
+    align-self: center;
+    margin: 0  auto;
+    z-index: 3;
+    position: relative;
+}
+
+/* LINKS */
+
+.header .container .menu li{
+    z-index: 3;
+    margin-right: 1.5rem;
+}
+
+.header .container .menu a{
+    padding:1.5rem 0rem 1.5rem 0rem;
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 1rem;  
+    height: 100%;
+  
+}
+
+/* HOVERS */
+
+.header .container .menu a:hover{
+    transition: 0.2s all;
+    color: white;
+    text-shadow: var(--text-shadow-menu);
+    border-top: 5px solid var(--border-top-menu-transition);
+}
+
+/* FOCUS ON A LINK OF MENU A */
+.header .container .menu a:focus{
+    text-shadow: var(--text-shadow-menu);
+}
+
+
+
+/* LOGIN AND DOWNLOAD STYLE */
+
+.header .container .download-login{
+    display: flex;
+    align-items: center;
+   
+}
+
+/* BUTTON STYLES GENERAL */
+.header .container .download-login .button{
+    padding: 0 1rem;
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+}
+
+.header .container .download-login .button a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+/* LOGIN BUTTON IMG STYLE */
+
+.header .container .download-login .login img{
+    opacity: 0.6;
+    width: 2.7rem;
+}
+
+/* LOGIN STYLE */
+.header .container .download-login .login{
+    display: flex;
+    align-items: center;
+   
+}
+.header .container .download-login .login a{
+    padding-right: 1.5rem;
+    font-weight: 300;
+}
+
+/* LOGIN HOVER */
+.header .container .download-login .login:hover a{
+    color: white;  
+    transition: .2s ease;  
+}
+.header .container .download-login .login:hover img{
+    opacity: 1;
+    transition: .2s ease;  
+}
+
+/*------- DOWNLOAD STYLES---- */
+.header .container .download-login .download{
+    background-color: var(--download-btn);
+}
+
+.header .container .download-login .download a{
+    color: black;
+    font-size: 1.8rem;
+    padding:2.3rem 3.7rem;
+    display: block;
+    letter-spacing: 0.1rem;       
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1082px){
+    /* WRAPING */
+  .header {
+        overflow: hidden;
+        flex-wrap: wrap;   
+    }
+
+    .header .container{
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        
+    }
+    /* WIDTH  NAV 100% FOR WRAP */
+   .header .container nav{
+      width: 100%;
+  
+      margin-bottom: 2rem;
+   }
+
+   .header .container .menu{
+    padding-left: 0;
+   }
+   /* CHANGING COLOR FOR A SWEET VIEW */
+   .header .container .menu  a{
+    font-size: 1.7rem;
+    color: white;
+}   
+/* LOGIN */
+     .header .container .download-login .button:first-child{
+        font-size: 1.7rem ;
+     }
+
+   /* HEADER LOGO CONTAINER */
+   
+   .header .header-logo-container{
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+   }
+
+   /* AUDIO LOGO HEADER */
+   .header .header-logo-container .audio-logo-header{
+    display: none;
+
+   }
+
+    .header .header-logo-container .header-logo {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* SCREEN 460PX */
+
+@media screen and (max-width:510px){
+       
+    
+    .header .container{
+        padding:2rem 0 2rem 0;
+    }
+    /* NO BORDER TOP ON PHONE */
+    .header .container .menu a:hover{
+        border-top: none;
+    }
+
+    /* FLEX DIRECTION COLUMN FOR MENU ON -500PX */
+    .header .container .menu{
+        flex-direction: column;
+        line-height: 3.5rem;
+        align-items: center;
+       
+    }
+    /* A BIT MORE SIZE ON LETTERS READ GOOD ON PHONE */
+
+
+    /* DOWNLOAD AND LOGIN BUTTON ON COLUMN */
+    .header .container .download-login{
+        flex-direction: column;
+    }
+
+    /* a bit separate elements of login and change-color */
+
+    .header .container .download-login .login img{
+        opacity: 1;
+    }
+
+    .header .container .download-login button:first-child{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        order: 2;
+    }
+    .header .container .download-login button:first-child a{
+        color: white;
+    }
+}
+

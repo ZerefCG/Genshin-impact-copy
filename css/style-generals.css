@@ -1,0 +1,47 @@
+/* THIS CODE ITS WRITE BY ZEREFCG/GITHUB
+DISCORD:Zeref#5153
+I AM FRONT END DEVELOPER STUDENT, THIS ITS A PRACTICE OF MOCK UP FOR ME on HTML and CSS RESPONSIVE WITH FLEXBOX (NO GRID, I NEED LEARN THAT), SORRY ITS MY CODE ITS BAD, IM REALLY TRYING!
+
+You are welcome submit some feedbacks on my socials media
+*/
+
+/*----- WEB COLORS ------ */
+
+:root{
+    --download-btn:#ffcf0d;
+    --header-bg:rgba(17,17,17,0.75);
+    --font-color:#ccc;
+    --font-color-hover:white;
+    --text-shadow-menu:0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    --border-top-menu-transition:#69e0ff;
+    --text-donwnload-now: 0 0 10px rgb(114 71 21 / 68%), 0 0 10px rgb(114 71 21 / 68%);
+    --box-shadow-header:0 3px 7px 0 rgb(0 0 0 / 35%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* CONTAINER FOR CENTER */
+.container{
+    width: 100%;
+    max-width: 125rem;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* BG BODY */
+
+body{
+    background-image: url(../img/bg-genshin.jpg);
+    /* background-color: rgb(87, 85, 85); COMMENT WHEN FINISH HIM */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
