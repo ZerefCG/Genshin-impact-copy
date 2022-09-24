@@ -1,6 +1,7 @@
 main{
-    min-height: 81vh;
+    min-height: 91.5vh;
     display: flex;
+    flex-wrap: wrap;
     /* border: solid 1px WHITE; COMMENT WHEN FINISH HIM */
     align-items: flex-end;
 }
@@ -16,10 +17,10 @@ main .container{
 }
 
 /* BORDERS FOR CALCULE AND BOX MODEL, COMMENT WHEN FINISH HIM */
-.play-container,
+/* .play-container,
 .downloads-section, h2{
-    /* border: solid 1px white; */
-}
+    border: solid 1px white;
+} */
 
 /* CONTAINER PLAY BUTTON  STYLES */
 
@@ -111,6 +112,9 @@ main .container .downloads-section li:hover{
 /* INGAME TERMS A BIT PADDING */
 .ingame-terms{
     padding-left: 1rem;
+    width: 100%;
+    align-self: flex-end;
+    
 }
 
 @media screen and (max-width:1082px)

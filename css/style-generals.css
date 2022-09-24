@@ -38,7 +38,7 @@ html{
 
 /* BG BODY */
 
-body{
+.container-bg{
     background-image: url(../img/bg-genshin.jpg);
     /* background-color: rgb(87, 85, 85); COMMENT WHEN FINISH HIM */
     background-size: cover;

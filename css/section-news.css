@@ -1,0 +1,237 @@
+.news{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../img-section-news/29770c4.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+.news h2{
+    font-size: 5.2rem;
+    font-weight: 400;
+    color: white;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/* NEWS h2 STYLES WITH AFTER AND BEFORE */
+/* .news h2::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 38rem;
+    height: 1.4rem;
+    background-image: url(../img-section-news/arrow.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+    transform: translateX(24rem);
+    
+    
+} */
+
+/* COMMENT WHEN FINISH IT */
+/* .news h2, .news .container, .image-slider, .notices{
+    border: 1px solid black;
+} */
+
+/* I TRY SET THE ARROW BUT ITS A BIT HARD FOR ME AND MORE WITH RESPONSIVE DESIGN */
+
+/* FLEXBOX ON NOTICES */
+
+.news .container{
+    display: flex;
+    width:100%;
+}
+
+.news .container .notices{
+    display: flex;
+    flex-direction: column;
+}
+
+/* SPACE FOR TWO CONTAINERS LEFT AND RIGHT SIDE OF 50% */
+.news .container .notices,
+.news .container .image-slider{
+    width: calc(100%/2);
+}
+
+/* ADAPTING IMG FOR CONTAINER */
+
+/* SLIDER IMAGE SECTION, UL A WITH 400% FOR 4 IMAGES, FOR MOVE WITH MARGIN NEGATIVE OR TRANSLATE WITH CSS */
+.news .container .image-slider{
+    overflow: hidden;/* OVERFLOW HIDDEN FOR THE OTHER 3 IMAGES OUT OF CONTAINER*/
+}
+.news .container .image-slider ul{
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation-name: slidershow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-timing-function: linear;
+}
+
+.news .container .image-slider ul li{
+    list-style: none;
+    width: 100%;
+}
+
+.news .container .image-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ANIMATION */
+
+@keyframes slidershow{
+    0%{margin-left: 0;}
+    20%{ margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}  
+}
+
+/* NOTICES SECTION RIGHT SIDE */
+
+/* TITTLE  OF NOTICES //LATEST//*/
+
+.latest{
+    color: #ffd49f;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* AFTER FOR BAR  BOTTOM ON LATEST */
+.latest::after{
+    content: '';
+    border-bottom:0.4rem solid #ffd49f ;
+    width: 6rem;
+    display: block;
+}
+
+
+/* FONT STYLES FOR NOTICES SECTION */
+.news .container .notices{
+    line-height: 3rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem 2rem 2rem ;
+    background-color: rgba(38,18,12,0.62);
+}
+
+/* LIST STYLE  OF NOTICES SECTION*/
+.news .container .notices .news-genshin{
+    list-style: none;
+    padding:0;
+}
+
+/* STYLE FOR LINKS DISPLAYING FLEX FOR ORDER OF TWO SPANS*/
+.news .container .notices .news-genshin a{
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.5rem 0 1rem 0.5rem;
+    color: white;
+    border-bottom: 0.2rem solid rgba(255,255,255,0.08)
+    
+}
+
+/* HOVER EFFECT FOR ITEMS ON NOTICES RIGHT SIDE */
+
+.news .container .notices .news-genshin a:hover{
+    background-color: rgba(255,255,255,0.08);
+}
+
+/* ELLIPSIS WITH A SPAN CLASS */
+ /* OVERFLOW ELLIPSIS FOR LIMIT TEXT AND OVERFLOW WATCH A .... AFTER TEXT LIMIT, A LIMIT WITH 80% FOR SPACE TO DATE ITEM*/
+
+.news .container .notices .news-genshin a .over-flow-ellipsis
+{   display: block;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* OVERFLOW ELLIPSIS FOR DATE TOO, NOWRAP */
+.news .container .notices .news-genshin a .date{
+    white-space: nowrap;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    opacity: 0.3;
+    font-weight: 300;
+}
+
+/* ----BUTTON MORE---- */
+
+.news .container .notices .button-more{
+    align-self: flex-end;
+    padding-left: 3rem;
+    background-image: url(../img-section-news/more-button.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    text-decoration: none;
+    color: white;
+    
+}
+/* HOVER BUTTON MORE */
+.news .container .notices .button-more:hover{
+    color: rgba(255,212,159,0.75);
+    background-image: url(../img-section-news/more-button-hover.png);
+    transition: 0.2s all;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1024px) {
+
+        /* TITTLE LATEST */
+        .latest{
+            text-align: center;
+        }
+        .latest::after{
+            margin: 0 auto;
+        }
+    /* CONTAINER WRAP FOR ONE COLUMN */
+    .news .container{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    .news .container .notices, .news .container .image-slider{
+        width: 90%;
+    }
+
+    /* OVERFLOW ELLIPSIS */
+
+    .news .container .notices .news-genshin a{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    .news .container .notices .news-genshin a .over-flow-ellipsis{
+        width: 100%;
+        text-align: center;
+        white-space:initial;
+    }
+}
+
+
+
+
