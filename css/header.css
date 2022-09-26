@@ -22,23 +22,23 @@
 
 /* IMAGE GENSHIN */
 
-.header .header-logo-container .header-logo img{
+.header-logo-container .header-logo img{
     vertical-align:top;
     z-index: 2;
 }
 
-/* AUDIO */
+/* AUDIO BUTTON SIZE ON THE LEFT SIDE OF GENSHING IMG*/
 
-.header .header-logo-container .audio-logo-header{
+ .header-logo-container .audio-logo-header{
     width: 3rem;
     margin-right: -8rem;
     z-index: 3;
 }
-.header .header-logo-container .audio-logo-header a{
+ .header-logo-container .audio-logo-header a{
     width: inherit;
 }
 
-.header .header-logo-container .audio-logo-header a img{
+.header-logo-container .audio-logo-header a img{
     width: inherit;
 }
 
@@ -54,7 +54,7 @@
 
 /* NAV STYLES */
 
-.header .container .menu{
+.header  .menu{
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -68,12 +68,12 @@
 
 /* LINKS */
 
-.header .container .menu li{
+.header  .menu li{
     z-index: 3;
     margin-right: 1.5rem;
 }
 
-.header .container .menu a{
+.header  .menu a{
     padding:1.5rem 0rem 1.5rem 0rem;
     color: var(--font-color);
     text-decoration: none;
@@ -85,7 +85,7 @@
 
 /* HOVERS */
 
-.header .container .menu a:hover{
+.header  .menu a:hover{
     transition: 0.2s all;
     color: white;
     text-shadow: var(--text-shadow-menu);
@@ -93,7 +93,7 @@
 }
 
 /* FOCUS ON A LINK OF MENU A */
-.header .container .menu a:focus{
+.header  .menu a:focus{
     text-shadow: var(--text-shadow-menu);
 }
 
@@ -101,59 +101,59 @@
 
 /* LOGIN AND DOWNLOAD STYLE */
 
-.header .container .download-login{
+.header  .download-login{
     display: flex;
     align-items: center;
    
 }
 
 /* BUTTON STYLES GENERAL */
-.header .container .download-login .button{
+.header  .download-login .button{
     padding: 0 1rem;
     cursor: pointer;
     background-color: inherit;
     border: none;
 }
 
-.header .container .download-login .button a{
+.header  .download-login .button a{
     text-decoration: none;
     color: var(--font-color);
 }
 
 /* LOGIN BUTTON IMG STYLE */
 
-.header .container .download-login .login img{
+.header  .download-login .login img{
     opacity: 0.6;
     width: 2.7rem;
 }
 
 /* LOGIN STYLE */
-.header .container .download-login .login{
+.header  .download-login .login{
     display: flex;
     align-items: center;
    
 }
-.header .container .download-login .login a{
+.header  .download-login .login a{
     padding-right: 1.5rem;
     font-weight: 300;
 }
 
 /* LOGIN HOVER */
-.header .container .download-login .login:hover a{
+.header  .download-login .login:hover a{
     color: white;  
     transition: .2s ease;  
 }
-.header .container .download-login .login:hover img{
+.header .download-login .login:hover img{
     opacity: 1;
     transition: .2s ease;  
 }
 
 /*------- DOWNLOAD STYLES---- */
-.header .container .download-login .download{
+.header  .download-login .download{
     background-color: var(--download-btn);
 }
 
-.header .container .download-login .download a{
+.header  .download-login .download a{
     color: black;
     font-size: 1.8rem;
     padding:2.3rem 3.7rem;
@@ -163,7 +163,7 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width:1082px){
+@media screen and (max-width:1100px){
     /* WRAPING */
   .header {
         overflow: hidden;
@@ -177,26 +177,30 @@
         
     }
     /* WIDTH  NAV 100% FOR WRAP */
-   .header .container nav{
+   .header  nav{
       width: 100%;
-  
       margin-bottom: 2rem;
    }
 
-   .header .container .menu{
+   /* RESETTING PADDING AND MARGIN ON MOBILE AND TABLET */
+   .header  .menu{
     padding-left: 0;
    }
+   /* RESET THIS MARGIN RIGHT FOR ITEMS, ON DEKSTOP GOOD BUT ON MOBILE CAN'T CENTER ITEMS GOOD FOR THIS */
+   .header  .menu li{
+    margin-right: 0;
+   }
    /* CHANGING COLOR FOR A SWEET VIEW */
-   .header .container .menu  a{
+   .header  .menu  a{
     font-size: 1.7rem;
     color: white;
 }   
 /* LOGIN */
-     .header .container .download-login .button:first-child{
+     .header  .download-login .button:first-child{
         font-size: 1.7rem ;
      }
 
-   /* HEADER LOGO CONTAINER */
+   /* HEADER LOGO CONTAINER WIDTH 100% FOR WRAP ON MOBILE MENU AND LOGIN ON HEADER */
    
    .header .header-logo-container{
       width: 100%;
@@ -209,12 +213,12 @@
    }
 
    /* AUDIO LOGO HEADER */
-   .header .header-logo-container .audio-logo-header{
+   .header .audio-logo-header{
     display: none;
 
    }
 
-    .header .header-logo-container .header-logo {
+    .header .header-logo {
         width: 80%;
         display: flex;
         justify-content: center;
@@ -226,16 +230,16 @@
 @media screen and (max-width:510px){
        
     
-    .header .container{
+    .header {
         padding:2rem 0 2rem 0;
     }
     /* NO BORDER TOP ON PHONE */
-    .header .container .menu a:hover{
+    .header  .menu a:hover{
         border-top: none;
     }
 
     /* FLEX DIRECTION COLUMN FOR MENU ON -500PX */
-    .header .container .menu{
+    .header  .menu{
         flex-direction: column;
         line-height: 3.5rem;
         align-items: center;
@@ -245,22 +249,22 @@
 
 
     /* DOWNLOAD AND LOGIN BUTTON ON COLUMN */
-    .header .container .download-login{
+    .header  .download-login{
         flex-direction: column;
     }
 
     /* a bit separate elements of login and change-color */
 
-    .header .container .download-login .login img{
+    .header  .download-login .login img{
         opacity: 1;
     }
 
-    .header .container .download-login button:first-child{
+    .header  .download-login button:first-child{
         margin-top: 3rem;
         margin-bottom: 3rem;
         order: 2;
     }
-    .header .container .download-login button:first-child a{
+    .header  .download-login button:first-child a{
         color: white;
     }
 }

@@ -1,3 +1,5 @@
+
+/* NEWS SECTION HEIGHT AND BACKGROUND */
 .news{
     min-height: 100vh;
     display:flex;
@@ -7,9 +9,10 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   
 }
-
+/* NEWS TITTLE */
 .news h2{
     font-size: 5.2rem;
     font-weight: 400;
@@ -32,8 +35,6 @@
     background-repeat: no-repeat;
     background-size:100%;
     transform: translateX(24rem);
-    
-    
 } */
 
 /* COMMENT WHEN FINISH IT */
@@ -50,24 +51,24 @@
     width:100%;
 }
 
-.news .container .notices{
+.news  .notices{
     display: flex;
     flex-direction: column;
 }
 
 /* SPACE FOR TWO CONTAINERS LEFT AND RIGHT SIDE OF 50% */
-.news .container .notices,
-.news .container .image-slider{
+.news  .notices,
+.news  .image-slider{
     width: calc(100%/2);
 }
 
 /* ADAPTING IMG FOR CONTAINER */
 
 /* SLIDER IMAGE SECTION, UL A WITH 400% FOR 4 IMAGES, FOR MOVE WITH MARGIN NEGATIVE OR TRANSLATE WITH CSS */
-.news .container .image-slider{
+.news .image-slider{
     overflow: hidden;/* OVERFLOW HIDDEN FOR THE OTHER 3 IMAGES OUT OF CONTAINER*/
 }
-.news .container .image-slider ul{
+.news .image-slider ul{
     padding: 0;
     margin: 0;
     width: 400%;
@@ -80,12 +81,12 @@
     animation-timing-function: linear;
 }
 
-.news .container .image-slider ul li{
+.news  .image-slider ul li{
     list-style: none;
     width: 100%;
 }
 
-.news .container .image-slider img{
+.news  .image-slider img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -127,7 +128,7 @@
 
 
 /* FONT STYLES FOR NOTICES SECTION */
-.news .container .notices{
+.news  .notices{
     line-height: 3rem;
     font-size: 1.6rem;
     padding: 1.5rem 2rem 2rem 2rem ;
@@ -135,13 +136,13 @@
 }
 
 /* LIST STYLE  OF NOTICES SECTION*/
-.news .container .notices .news-genshin{
+.news  .notices .news-genshin{
     list-style: none;
     padding:0;
 }
 
 /* STYLE FOR LINKS DISPLAYING FLEX FOR ORDER OF TWO SPANS*/
-.news .container .notices .news-genshin a{
+.news  .notices .news-genshin a{
     text-decoration: none;
     display: flex;
     align-items: baseline;
@@ -154,14 +155,14 @@
 
 /* HOVER EFFECT FOR ITEMS ON NOTICES RIGHT SIDE */
 
-.news .container .notices .news-genshin a:hover{
+.news  .notices .news-genshin a:hover{
     background-color: rgba(255,255,255,0.08);
 }
 
 /* ELLIPSIS WITH A SPAN CLASS */
  /* OVERFLOW ELLIPSIS FOR LIMIT TEXT AND OVERFLOW WATCH A .... AFTER TEXT LIMIT, A LIMIT WITH 80% FOR SPACE TO DATE ITEM*/
 
-.news .container .notices .news-genshin a .over-flow-ellipsis
+.news  .notices .news-genshin a .over-flow-ellipsis
 {   display: block;
     width: 80%;
     overflow: hidden;
@@ -170,7 +171,7 @@
 }
 
 /* OVERFLOW ELLIPSIS FOR DATE TOO, NOWRAP */
-.news .container .notices .news-genshin a .date{
+.news  .notices .news-genshin a .date{
     white-space: nowrap;
     padding-left: 1rem;
     font-size: 1.4rem;
@@ -180,7 +181,7 @@
 
 /* ----BUTTON MORE---- */
 
-.news .container .notices .button-more{
+.news  .notices .button-more{
     align-self: flex-end;
     padding-left: 3rem;
     background-image: url(../img-section-news/more-button.png);
@@ -188,10 +189,10 @@
     background-position: center left;
     text-decoration: none;
     color: white;
-    
 }
+
 /* HOVER BUTTON MORE */
-.news .container .notices .button-more:hover{
+.news  .notices .button-more:hover{
     color: rgba(255,212,159,0.75);
     background-image: url(../img-section-news/more-button-hover.png);
     transition: 0.2s all;

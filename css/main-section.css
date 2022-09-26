@@ -25,7 +25,7 @@ main .container{
 
 /* CONTAINER PLAY BUTTON  STYLES */
 
-main .container .play-container{
+main  .play-container{
     width: 30%;
      display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ main .container .play-container{
 }
 
 /* BUTTON RADIUS ON CIRCLE */
-main .container .play-container .border-radius{
+main  .play-container .border-radius{
     width: 4.8rem;
     height: 4.8rem;
     border-radius: 50%;
@@ -54,7 +54,7 @@ main .container .play-container .border-radius{
 
 /* HOVER EFFECT WITH ANOTHER IMAGEN BUTTON */
 
-main .container .play-container .border-radius:hover{
+main  .play-container .border-radius:hover{
     transition: 0.2s all;
     background-color: transparent;
     background-position: 45% 60%;    
@@ -62,7 +62,6 @@ main .container .play-container .border-radius:hover{
 }
 
 /* END BUTTON PLAY SECTION */
-
 
 /* H2 EFFECTS */
 
@@ -78,7 +77,7 @@ main .container h2{
 
 /* -----CONTAINER BUTTONS PS4, APPLE, GOOGLE PLAY, WINDOWS------ */
 
-main .container .downloads-section{
+main  .downloads-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -88,22 +87,23 @@ main .container .downloads-section{
 }
 
 /* NOW STYLE THE IMAGES WITH LINK */
-main .container .downloads-section li{
+
+main  .downloads-section li{
     margin-right: 1.5rem;
     opacity: 0.8;
 }
 
-main .container .downloads-section li a{
+main .downloads-section li a{
    display: flex;
 }
 
-main .container .downloads-section li a img{
+main .downloads-section li a img{
     vertical-align: top;
     width: 100%;
 }
 
 /* HOVER EFFECTS OF THIS SECTION */
-main .container .downloads-section li:hover{
+main .downloads-section li:hover{
     opacity: 1;
     transition: 0.2s all;
 }
@@ -115,8 +115,9 @@ main .container .downloads-section li:hover{
     padding-left: 1rem;
     width: 100%;
     align-self: flex-end;
-    
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width:1082px)
 {
@@ -125,14 +126,14 @@ main .container .downloads-section li:hover{
         min-height:66vh;
     }
 
-    main .container .play-container{
+    main .play-container{
         margin-top: 0;
     }
 }
 
 @media screen and (max-width:812px)
 {
-    main .container .downloads-section li{
+    main  .downloads-section li{
         margin-top: 1rem;
     }
 

@@ -1,0 +1,151 @@
+.genshin-chars{
+    width: 100%;
+}
+
+/* NAMES TITLES -->BACKGROUND, POSITION WITH FLEX */
+.genshin-chars .char-name{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 300;
+    background-image: url(../chars-gensh/simbol.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+ 
+}
+
+/* STYLES GENERALS OF CHARACTERS CONTAINER BACKGROUNDS */
+
+.genshin-chars .char-container{
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+}
+
+/* USING A ELEMENT BEFORE FOR BACKGROUND SHADOW */
+.genshin-chars .char-container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+    position: absolute;
+}
+
+/* FOR HOVER MORE OPACITY FOR RESALT NAME AND CHAR PNG  */
+.genshin-chars .char-container:hover::before{
+    opacity: 0.2 ;
+}
+
+/* ---BACKGROUND PER CHARACTER--- */
+/* BACKGROUNDS OF CHARACTERS ONE PER ONE USING NTH CHILD */
+.genshin-chars .char-container:nth-child(1){background-image:url(../chars-gensh/montast-bg.jpg) ; }
+
+.genshin-chars .char-container:nth-child(2){background-image: url(../chars-gensh/Liyue-bg.jpg);}
+
+.genshin-chars .char-container:nth-child(3){background-image: url(../chars-gensh/inazuma-bg.jpg);}
+
+.genshin-chars .char-container:nth-child(4){  background-image:  url(../chars-gensh/sumeru-bg.jpg);}
+
+/* -----HOVERS STYLES----------*/
+
+/* LINK STYLES GENERALS OF CHARACTERS */
+
+.genshin-chars  a{
+    width:100%;
+    height: 26rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-width: 0.5rem;
+    border-color: transparent;
+    border-style: solid;
+    z-index: 2;
+    transition: 0.2s all;
+}
+
+/*--- HOVERS OF A EFFECT--- */
+
+.genshin-chars  a:hover{
+    border-color: white;
+}
+
+/* BACKGROUNDS WITH HOVER */
+
+/* STYLES GENERAL OF CHARACTERS CONTAINER POSITION */
+.genshin-chars .char-container a:hover{
+    background-position: 140% 50%;
+    background-repeat: no-repeat;
+}
+
+/* IMG WHEN USER DOING HOVER CHARACTER PER CHARACTER */
+.genshin-chars .char-container:nth-child(1) a:hover{
+    background-image: url(../chars-gensh/montast.png);
+}
+
+.genshin-chars .char-container:nth-child(2) a:hover{
+    background-image: url(../chars-gensh/Liyue.png);
+}
+
+.genshin-chars .char-container:nth-child(3) a:hover{
+    background-image: url(../chars-gensh/inazuma.png);
+}
+
+.genshin-chars .char-container:nth-child(4) a:hover{
+    background-image: url(../chars-gensh/sumeru.png);
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width:1100px)
+
+{  
+    /* TRYING A TEST POSICIONATE THE TITLE OF CHAR ON THE LEFT SIDE WHEN PEOPLE HOVER ON ''a'' */
+    .genshin-chars a:hover .char-name{
+        justify-content: flex-start;
+    }
+    /* GENSHIN CHARACTERS WITHOUT HOVER BORDER FOR -1100PX */
+    .genshin-chars  a{
+        border: none;
+    }
+
+    /* A BIT MORE OPACITY FOR  HIGHLIGHT THE PNG IMG CHARACTER AND TITLE */
+    .genshin-chars .char-container:hover::before{
+        opacity: 0.6 ;
+    }
+
+    /* TRYING POSICIONATE BACKGROUND FOR PHONES */
+    .genshin-chars .char-container a:hover{
+        background-position: center;
+    }
+
+    .genshin-chars .char-container a{
+        background-position: center;
+        background-repeat: no-repeat;
+          }
+
+      /* GENSHIN CHARS WITH LINEAR GRADIENT FOR -1100PX, LINEAR GRADIENT BECAUSE ON 1100PX DISPLAY IMGS PNG ALWAYS VISIBLE(NO HOVER) AND BACKGROUND ON CENTER FOR PHONES AND TABLETS, BUT THE PNG NEEDS A BIT OF FILTER FOR READ THE TITLE NAME, I THINK CAN HAVE ANOTHER SOLUTION BUT IM NEW SO PLEASE DON'T FLAME ME <3 */
+      
+    .genshin-chars .char-container:nth-child(1) a
+    {background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../chars-gensh/montast.png);}
+
+    .genshin-chars .char-container:nth-child(2) a
+    {background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../chars-gensh/Liyue.png);} 
+
+    .genshin-chars .char-container:nth-child(3) a
+    {background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../chars-gensh/inazuma.png);}
+
+    .genshin-chars .char-container:nth-child(4) a
+    {background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../chars-gensh/sumeru.png);}
+}
+
