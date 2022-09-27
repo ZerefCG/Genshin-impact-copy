@@ -1,0 +1,90 @@
+.genshin-footer{
+    color: #999;
+    background-color: black;
+    padding: 1.5rem;
+    
+}
+
+p{
+    margin-bottom: 0;
+    line-height: 2rem ;
+}
+
+/* LINKS A STYLES GENERALS */
+a{
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem 1rem;
+    margin-right: 0.5rem;
+}
+
+/* HOVER GENERAL */
+ a:hover{
+    color: white;
+}
+
+/* SOCIAL MEDIA  BORDER-BOTTOM STYLES */
+.genshin-footer .social-medias{
+   border-bottom: 0.1rem solid rgba(255,255,255,0.2); 
+}
+
+/* LINK STYLES SIZE OF SOCIAL MEDIA */
+.social-medias a{
+    font-size: 2.7rem;
+    display: inline-block;
+}
+
+
+/* ALCOHOL-AGE REF */
+.age-alcohol-ref{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 20rem;
+    margin-top: 2.5rem;
+}
+.age-alcohol-ref img{
+    width: 100%;
+    vertical-align: top;
+    margin-right: 1rem;
+}
+
+/* TERMS SERVICES */
+
+.terms-services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* HOYOVERSE-LOGO */
+.hoyoverse{
+    width: 27rem;
+}
+
+.hoyoverse img{
+    width: 100%;
+}
+
+.Copyright-white{
+    color: white;
+    margin-bottom: 3rem;
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width:500px) {
+    
+.priv-terms-about-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-medias{
+    text-align: center;
+}
+
+}
+

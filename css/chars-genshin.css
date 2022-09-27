@@ -6,7 +6,6 @@
 .genshin-chars .char-name{
     margin: 0;
     height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,17 +15,17 @@
     background-repeat: no-repeat;
     background-position: center;
     text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
- 
+    
+   
 }
 
 /* STYLES GENERALS OF CHARACTERS CONTAINER BACKGROUNDS */
 
 .genshin-chars .char-container{
-    display: flex;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative; /*RELATIVE FOR LIMIT THE BEFORE BACKGROUND SHADOW*/
     background-position: 50%;
-    position: relative;
 }
 
 /* USING A ELEMENT BEFORE FOR BACKGROUND SHADOW */
@@ -38,6 +37,7 @@
     opacity: 0.4;
     z-index: 1;
     position: absolute;
+  
 }
 
 /* FOR HOVER MORE OPACITY FOR RESALT NAME AND CHAR PNG  */
@@ -45,26 +45,13 @@
     opacity: 0.2 ;
 }
 
-/* ---BACKGROUND PER CHARACTER--- */
-/* BACKGROUNDS OF CHARACTERS ONE PER ONE USING NTH CHILD */
-.genshin-chars .char-container:nth-child(1){background-image:url(../chars-gensh/montast-bg.jpg) ; }
-
-.genshin-chars .char-container:nth-child(2){background-image: url(../chars-gensh/Liyue-bg.jpg);}
-
-.genshin-chars .char-container:nth-child(3){background-image: url(../chars-gensh/inazuma-bg.jpg);}
-
-.genshin-chars .char-container:nth-child(4){  background-image:  url(../chars-gensh/sumeru-bg.jpg);}
-
-/* -----HOVERS STYLES----------*/
 
 /* LINK STYLES GENERALS OF CHARACTERS */
 
 .genshin-chars  a{
     width:100%;
     height: 26rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     text-decoration: none;
     color: white;
     border-width: 0.5rem;
@@ -72,13 +59,31 @@
     border-style: solid;
     z-index: 2;
     transition: 0.2s all;
+    position: relative; /*RELATIVE Y Z-INDEX PARA QUE EL BEFORE NO SE SOBREPONGA sobre el ENLACE*/
 }
 
 /*--- HOVERS OF A EFFECT--- */
-
 .genshin-chars  a:hover{
     border-color: white;
 }
+/* NOT APPLY  EFFECTS ON COMING SOON */
+.genshin-chars a:hover .char-name:not(.exception){
+    justify-content: center;
+}
+
+
+/* BACKGROUNDS OF CHARACTERS ONE PER ONE USING NTH CHILD */
+.genshin-chars .char-container:nth-child(1){background-image: url(../chars-gensh/montast-bg.jpg) ; }
+
+.genshin-chars .char-container:nth-child(2){background-image: url(../chars-gensh/Liyue-bg.jpg);}
+
+.genshin-chars .char-container:nth-child(3){background-image: url(../chars-gensh/inazuma-bg.jpg);}
+
+.genshin-chars .char-container:nth-child(4){background-image: url(../chars-gensh/sumeru-bg.jpg);}
+
+.genshin-chars .char-container:nth-child(5){ 
+     background-image:  url(../chars-gensh/Coming-soon.jpg);}
+     
 
 /* BACKGROUNDS WITH HOVER */
 
@@ -102,7 +107,7 @@
 }
 
 .genshin-chars .char-container:nth-child(4) a:hover{
-    background-image: url(../chars-gensh/sumeru.png);
+    background-image:  url(../chars-gensh/sumeru.png);
 }
 
 /* MEDIAQUERIES */
@@ -111,7 +116,7 @@
 
 {  
     /* TRYING A TEST POSICIONATE THE TITLE OF CHAR ON THE LEFT SIDE WHEN PEOPLE HOVER ON ''a'' */
-    .genshin-chars a:hover .char-name{
+    .genshin-chars a:hover .char-name:not(.exception){
         justify-content: flex-start;
     }
     /* GENSHIN CHARACTERS WITHOUT HOVER BORDER FOR -1100PX */
@@ -134,7 +139,7 @@
         background-repeat: no-repeat;
           }
 
-      /* GENSHIN CHARS WITH LINEAR GRADIENT FOR -1100PX, LINEAR GRADIENT BECAUSE ON 1100PX DISPLAY IMGS PNG ALWAYS VISIBLE(NO HOVER) AND BACKGROUND ON CENTER FOR PHONES AND TABLETS, BUT THE PNG NEEDS A BIT OF FILTER FOR READ THE TITLE NAME, I THINK CAN HAVE ANOTHER SOLUTION BUT IM NEW SO PLEASE DON'T FLAME ME <3 */
+      /* GENSHIN CHARACTERS WITH LINEAR GRADIENT FOR -1100PX, LINEAR GRADIENT BECAUSE ON 1100PX DISPLAY IMGS PNG ALWAYS VISIBLE(NO HOVER) AND BACKGROUND ON CENTER FOR PHONES AND TABLETS, BUT THE PNG NEEDS A BIT OF FILTER FOR READ THE TITLE NAME, I THINK CAN HAVE ANOTHER SOLUTION BUT IM NEW SO PLEASE DON'T FLAME ME <3 */
       
     .genshin-chars .char-container:nth-child(1) a
     {background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../chars-gensh/montast.png);}
